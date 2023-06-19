@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Local Library</title>
+    {% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+            {% block sidebar %}
+            <ul class="sidebar-nav">
+                <li><a href="{% url 'lib:index' %}">Home</a></li>
+                <li><a href="{% url 'lib:books' %}">All Books</a></li>
+                <li><a href="{% url 'lib:authors' %}">All Authors</a></li>
+                <li><a href="/admin/">Admin Page</a></li>
+
+            </ul>
+            </div>
+            {% endblock %}
+        </div>
+        <div class="cool-sm-10">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
