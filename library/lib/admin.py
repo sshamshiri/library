@@ -18,7 +18,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     )
 @admin.register(models.Author)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('last_name' , 'first_name' , 'date_of_birth' , 'date_of_death')
+    list_display = ('last_name' , 'first_name' , 'date_of_birth' )
     fields =       ['last_name' , 'first_name' , ('date_of_birth' , 'date_of_death')]
 
 

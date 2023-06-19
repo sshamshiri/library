@@ -13,3 +13,17 @@ class Index (generic.TemplateView):
         context ['num_instances_available'] = models.BookInstance.objects.filter(status__exact='a').count()   
         context ['num_authors'] = models.Author.objects.count()
         return context
+
+class BookListView(generic.ListView):
+    model = models.Book
+    template_name = 'lib/book_list.html'
+
+
+class BookDetailView(generic.DetailView):
+    model = models.Book
+    template_name = 'lib/book_detail.html'
+
+
+class AuthorListView(generic.ListView):
+    model = models.Author
+    template_name = 'lib/author_list.html'
