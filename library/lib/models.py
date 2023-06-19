@@ -35,11 +35,11 @@ class BookInstance(models.Model):
         return f'{self.id}({self.book.title})'
 
 class Book(models.Model):
-    title = models.CharField(max_length=200)
-    author = models.ForeignKey(Author , on_delete=models.SET_NULL , null=True)
+    title =   models.CharField(max_length=200)
+    author =  models.ForeignKey(Author , on_delete=models.SET_NULL , null=True)
     summary = models.TextField(max_length=1000)
-    isbn = models.CharField('ISBN' , max_length=13 , help_text='13 character <a href="https://isbnsearch.org/">ISBN Number</a>')
-    genre = models.ManyToManyField('Genre' , help_text="Select a genre for this book")
+    isbn =    models.CharField('ISBN' , max_length=13 , help_text='13 character <a href="https://isbnsearch.org/">ISBN Number</a>')
+    genre =   models.ManyToManyField('Genre' , help_text="Select a genre for this book")
 
 
     def __str__(self):
