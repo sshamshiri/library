@@ -1,0 +1,13 @@
+{% extends 'lib/base_generic.html' %}
+
+{% block content %}
+
+{% for author in author_list %}
+    <h3>{{ author.last_name }}</h3>
+    <p>Author first_name:{{author.first_name}}</p>
+    <p>Date_of_birth:{{author.date_of_birth}}</p>
+    <p>Date_of_death:{{author.date_of_death}}</p>
+    <hr>
+{% endfor %}
+
+{% endblock %}
