@@ -18,7 +18,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     )
 @admin.register(models.Author)
 class AuthorAdmin(admin.ModelAdmin):
-    list_display = ('last_name' , 'first_name' , 'date_of_birth' )
+    list_display = ('last_name' , 'first_name' , 'date_of_birth' , 'date_of_death' )
     fields =       ['last_name' , 'first_name' , ('date_of_birth' , 'date_of_death')]
 
 
@@ -29,3 +29,7 @@ class BookInstancesInline(admin.TabularInline):
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title' , 'author' , 'display_genre')
     inlines =      [BookInstancesInline]
+
+@admin.register(models.Genre)
+class GenreAdmin(admin.ModelAdmin):
+    pass
