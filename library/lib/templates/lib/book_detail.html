@@ -9,7 +9,7 @@
     {% if not forloop.last %} {% endif %} {% endfor %}</p>
     <div style="margin-left:20px; margin-top:20px ;">
         <h4>Copies</h4>
-        {% for copy in book.bookinstances_set.all %}
+        {% for copy in book.bookinstance_set.all %}
             <hr>
             {% if copy.status != 'a' %}
             <p><strong>Due to be returned:</strong>{{ copy.due_back }}</p>
