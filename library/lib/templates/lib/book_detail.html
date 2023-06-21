@@ -5,6 +5,7 @@
 <h1>Title:{{book.title}}</h1>
     <p><strong>Author:</strong><a href="">{{book.author}}</a></p>
     <p><strong>Summary:</strong>{{book.summary}}</p>
+    <p><strong>ISBN:</strong>{{book.isbn}}</p>
     <p><strong>Genre:</strong>{% for genre in book.genre.all %}{{genre}}
     {% if not forloop.last %} {% endif %} {% endfor %}</p>
     <div style="margin-left:20px; margin-top:20px ;">
